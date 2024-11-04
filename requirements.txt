@@ -1,0 +1,9 @@
+ipykernel
+numpy
+pandas
+snowflake-connector-python
+sqlalchemy
+snowflake-sqlalchemy
+snowflake-snowpark-python
+snowflake-snowpark-python[pandas]
+dbt-snowflake

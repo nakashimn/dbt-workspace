@@ -1,0 +1,8 @@
+.env
+.dbt/*
+!.dbt/profiles.yml
+.snowflake/*
+!.snowflake/.gitignore
+.ssh/*
+!.ssh/.gitignore
+/tmp/

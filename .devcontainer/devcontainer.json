@@ -1,0 +1,17 @@
+{
+	"name": "dbt-workspace",
+	"dockerComposeFile": "../compose.yaml",
+	"service": "dbt-workspace",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"innoverio.vscode-dbt-power-user",
+				"ms-toolsai.jupyter",
+				"ms-python.python",
+				"snowflake.snowflake-vsc"
+			]
+		}
+	}
+}

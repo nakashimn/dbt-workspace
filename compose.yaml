@@ -1,0 +1,28 @@
+services:
+  dbt-workspace:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - DBT_PROJECT=${DBT_PROJECT}
+    container_name: dbt-project
+    hostname: dbt-project
+    shm_size: '4gb'
+    volumes:
+      - ./:/workspace:cached
+      - ./.dbt:/root/.dbt:cached
+      - ./.ssh:/root/.ssh:cached
+      - ./.snowflake:/root/.snowflake:cached
+    environment:
+      ACCOUNT: ${ACCOUNT}
+      DB: ${DB}
+      GIT_AUTHOR_EMAIL: ${GIT_EMAIL_ADDRESS}
+      GIT_AUTHOR_USER: ${GIT_USERNAME}
+      GIT_COMMITTER_EMAIL: ${GIT_EMAIL_ADDRESS}
+      GIT_COMMITTER_USER: ${GIT_USERNAME}
+      ROLE: ${ROLE}
+      SCHEMA: ${SCHEMA}
+      USER: ${USER}
+      WAREHOUSE: ${WAREHOUSE}
+
+    tty: true
